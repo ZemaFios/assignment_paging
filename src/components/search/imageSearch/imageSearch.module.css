@@ -8,3 +8,17 @@
     pointer-events: none;
     opacity: 0.5;
 }
+
+.container a {
+    display: inline-block;
+    margin: 10px 10px 10px 0;
+
+}
+
+.container input {
+    margin: 20px 0;
+}
+
+.container hr {
+    margin: 20px 0;
+}

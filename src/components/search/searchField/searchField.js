@@ -13,21 +13,27 @@ const SearchField = () => {
     const inputRef = useRef(null)
     const params = new URLSearchParams(searchParams);
 
-    
+    // Kaldes når der sker ændringer i inut feltet.
+    // Vi "debouncer" for at undgå for mange kald mod serveren.
     const onChangeHandler = useDebouncedCallback((e) => {
 
         let searchterm = e.target.value;
 
+        // Vi opretter en URL search params.
         const params = new URLSearchParams(searchParams);
 
         if(searchterm) {
+
             params.set('searchterm', searchterm);
+
         } else {
+
+            // Fjerne parameter fra urlen hvis vi ikke har et searchterm.
             params.delete('searchterm')
             params.delete('page')
         }
 
-       
+        // Ændre urlen ved at "replace" den originale.
         replace(`${pathname}?${params.toString()}`);
 
     }, 300) 

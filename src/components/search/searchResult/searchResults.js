@@ -4,8 +4,6 @@ const SearchResults = ({results}) => {
   
     const resultItems = results.data;
 
-    console.log('resultItems', results)
-
     return (
 
         <div className={styles.container}>
@@ -13,7 +11,10 @@ const SearchResults = ({results}) => {
                 resultItems?.map( (item, index) => {
 
                     return <div className={styles.item} key={item._id}>
-                        {item.author}
+                        <h3>{item.author}</h3>
+                        <p>Gallery: {item.gallery}</p>
+                        <p>Camera Model: {item.meta.image.Model}</p>
+                        <hr/>
                     </div>
 
                 })
