@@ -1,0 +1,10 @@
+.container {
+
+    background-color: "red";
+
+}
+
+.deactivate {
+    pointer-events: none;
+    opacity: 0.5;
+}

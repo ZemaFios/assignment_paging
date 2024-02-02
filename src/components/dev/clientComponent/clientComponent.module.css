@@ -1,0 +1,29 @@
+.container {
+
+    background-color: #666;
+    border: 10px #FFF solid;
+    width : 100%;
+    padding: 40px;
+}
+
+.container .header {
+
+    margin : 0 0 20px 0;
+    
+}
+
+.container button {
+
+    background-color: #000;
+    border: 2px #FFF solid;
+    padding: 10px;
+    margin: 10px 10px 0 0;
+
+}
+
+.container button:hover {
+
+    background-color: #FFF;
+    color: #000;
+    border: 2px #000 solid;
+}
